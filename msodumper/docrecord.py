@@ -1678,7 +1678,7 @@ class PapxFkp(DOCDirStream):
             # rgfc
             start = self.getuInt32(pos=pos)
             end = self.getuInt32(pos=pos + 4)
-            print '<rgfc index="%d" start="%d" end="%d">' % (i, start, end)
+            print '<rgfc index="%d" start="0x%08x" end="0x%08x">' % (i, start, end)
             print '<transformed value="%s"/>' % self.quoteAttr(self.mainStream.retrieveOffset(start, end))
             pos += 4
 
